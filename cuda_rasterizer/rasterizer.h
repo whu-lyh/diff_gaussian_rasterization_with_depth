@@ -75,6 +75,8 @@ namespace CudaRasterizer
 			const float* cov3D_precomp,
 			const float* viewmatrix,
 			const float* projmatrix,
+			const float* proj_k, // iComMa
+			const bool* compute_grad_cov2d, // iComMa
 			const float* campos,
 			const float tan_fovx, float tan_fovy,
 			const int* radii,
@@ -103,6 +105,7 @@ namespace CudaRasterizer
 			float* dL_dsh,
 			float* dL_dscale,
 			float* dL_drot,
+			float* dL_dcamerapose, // iComMa
 			bool debug);
 	};
 };
